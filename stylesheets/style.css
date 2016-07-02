@@ -22,7 +22,7 @@ div.container {
     left: 50%;
 }
 
-ul.redes {
+ul.social {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,21 +34,21 @@ ul.redes {
     padding: 0px;
 }
 
-	ul.redes li {
+	ul.social li {
 		list-style: none;
 		padding: 0px;
 	}
 
-		ul.redes li a{
+		ul.social li a{
 			text-decoration: none;
 			color: #fff;
 		}
 
-			ul.redes li a:hover{
+			ul.social li a:hover{
 				text-shadow: 0px 0px 15px #fff;
 			}
 
-		
+
 
 footer {
     left: 50%;

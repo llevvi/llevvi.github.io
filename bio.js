@@ -10,6 +10,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var e = React.createElement;
 
+var SOCIAL_GLYPHS_AND_LINKS = [{
+  'glyphicon': 'fa fa-linkedin fa-2x',
+  'url': 'https://www.linkedin.com/in/leandrovicentesilva/'
+}, {
+  'glyphicon': 'fa fa-youtube-play fa-2x',
+  'url': 'http://youtube.com/levvitalk'
+}, {
+  'glyphicon': 'fa fa-instagram fa-2x',
+  'url': 'http://instagram.com/levvitalk'
+}, {
+  'glyphicon': 'fa fa-facebook-square fa-2x',
+  'url': 'http://facebook.com/levvitalk'
+}];
+
+var generate_social_media_link = function generate_social_media_link(social_network) {
+  return React.createElement(
+    'li',
+    null,
+    ' ',
+    React.createElement(
+      'a',
+      { className: social_network.glyphicon, href: social_network.url, target: '_blank' },
+      ' '
+    ),
+    ' '
+  );
+};
+
 var Bio = function (_React$Component) {
   _inherits(Bio, _React$Component);
 
@@ -20,49 +48,25 @@ var Bio = function (_React$Component) {
   }
 
   _createClass(Bio, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return React.createElement(
-        "div",
+        'div',
         null,
         React.createElement(
-          "h1",
+          'h1',
           null,
-          "Leandro Vicente"
+          'Leandro Vicente'
         ),
         React.createElement(
-          "h2",
+          'h2',
           null,
-          "Sofware Developer and Content Creator"
+          'Sofware Developer and Content Creator'
         ),
         React.createElement(
-          "ul",
-          { className: "redes" },
-          React.createElement(
-            "li",
-            null,
-            React.createElement("a", { className: "fa fa-linkedin fa-2x", href: "https://www.linkedin.com/in/leandrovicentesilva/", target: "_blank" })
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement("a", { className: "fa fa-youtube-play fa-2x", href: "http://youtube.com/levvitalk", target: "_blank" })
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement("a", { className: "fa fa-instagram fa-2x", href: "http://instagram.com/levvitalk", target: "_blank" })
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement("a", { className: "fa fa-twitter fa-2x", href: "http://twitter.com/levvitalk", target: "_blank" })
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement("a", { className: "fa fa-facebook-square fa-2x", href: "http://facebook.com/levvitalk", target: "_blank" })
-          )
+          'ul',
+          { className: 'redes' },
+          SOCIAL_GLYPHS_AND_LINKS.map(generate_social_media_link)
         )
       );
     }

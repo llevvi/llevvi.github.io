@@ -2,6 +2,28 @@
 
 const e = React.createElement;
 
+const SOCIAL_GLYPHS_AND_LINKS = [
+  {
+    'glyphicon': 'fa fa-linkedin fa-2x',
+    'url': 'https://www.linkedin.com/in/leandrovicentesilva/'
+  },
+  {
+    'glyphicon': 'fa fa-youtube-play fa-2x',
+    'url': 'http://youtube.com/levvitalk'
+  },
+  {
+    'glyphicon': 'fa fa-instagram fa-2x',
+    'url': 'http://instagram.com/levvitalk'
+  },
+  {
+    'glyphicon': 'fa fa-facebook-square fa-2x',
+    'url': 'http://facebook.com/levvitalk'
+  }
+];
+
+ const generate_social_media_link = (social_network) => { 
+    return <li> <a className={social_network.glyphicon} href={social_network.url} target="_blank"> </a> </li>
+ };
 class Bio extends React.Component {
   constructor(props) {
     super(props);
@@ -13,22 +35,8 @@ class Bio extends React.Component {
         <h1>Leandro Vicente</h1>
         <h2>Sofware Developer and Content Creator</h2>
         <ul className="redes">
-          <li>
-            <a className="fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/leandrovicentesilva/" target="_blank"></a>
-          </li>
-          <li>
-              <a className="fa fa-youtube-play fa-2x" href="http://youtube.com/levvitalk" target="_blank"></a>
-          </li>
-          <li>
-              <a className="fa fa-instagram fa-2x" href="http://instagram.com/levvitalk" target="_blank"></a>
-          </li>
-          <li>
-              <a className="fa fa-twitter fa-2x" href="http://twitter.com/levvitalk" target="_blank"></a>
-          </li>
-          <li>
-              <a className="fa fa-facebook-square fa-2x" href="http://facebook.com/levvitalk" target="_blank"></a>
-          </li>
-        </ul>	
+          { SOCIAL_GLYPHS_AND_LINKS.map(generate_social_media_link) }
+        </ul>
       </div>
     );
   }

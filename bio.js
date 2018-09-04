@@ -20,20 +20,49 @@ var Bio = function (_React$Component) {
   }
 
   _createClass(Bio, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return React.createElement(
-        'div',
+        "div",
         null,
         React.createElement(
-          'h1',
+          "h1",
           null,
-          'Leandro Vicente'
+          "Leandro Vicente"
         ),
         React.createElement(
-          'h2',
+          "h2",
           null,
-          'Sofware Developer and Content Creator'
+          "Sofware Developer and Content Creator"
+        ),
+        React.createElement(
+          "ul",
+          { className: "redes" },
+          React.createElement(
+            "li",
+            null,
+            React.createElement("a", { className: "fa fa-linkedin fa-2x", href: "https://www.linkedin.com/in/leandrovicentesilva/", target: "_blank" })
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement("a", { className: "fa fa-youtube-play fa-2x", href: "http://youtube.com/levvitalk", target: "_blank" })
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement("a", { className: "fa fa-instagram fa-2x", href: "http://instagram.com/levvitalk", target: "_blank" })
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement("a", { className: "fa fa-twitter fa-2x", href: "http://twitter.com/levvitalk", target: "_blank" })
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement("a", { className: "fa fa-facebook-square fa-2x", href: "http://facebook.com/levvitalk", target: "_blank" })
+          )
         )
       );
     }

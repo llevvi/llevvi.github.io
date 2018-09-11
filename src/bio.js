@@ -7,11 +7,11 @@ export default class Bio extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>Leandro Vicente</h1>
-        <h2>Sofware Developer and Content Creator</h2>
+        <h2>Software Developer and Content Creator</h2>
         <Social />
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -1,4 +1,4 @@
-# This is a simple single-page persona page
+# This is a simple single-page personal website
 
 1- Make sure you have npm installed.
 

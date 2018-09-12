@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 import Bio from './bio.js';
 
 ReactDOM.render(
-<Bio />
+<Bio name="Leandro Vicente" tagline="Software Developer and Creator" />
 , document.getElementById('root'));

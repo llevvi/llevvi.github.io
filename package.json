@@ -2,10 +2,13 @@
   "name": "llevvi.github.io",
   "version": "1.0.0",
   "main": "main.js",
+  "homepage": "https://llevvi.github.io",
   "scripts": {
     "test": "react-scripts test --env=jsdom",
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --open --mode production",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,13 +20,13 @@
   "bugs": {
     "url": "https://github.com/llevvi/llevvi.github.io/issues"
   },
-  "homepage": "https://github.com/llevvi/llevvi.github.io#readme",
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.2",
     "babel-preset-react-app": "^3.1.2",
+    "gh-pages": "^1.2.0",
     "jest": "^23.6.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

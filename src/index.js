@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Bio from './bio.js';
-import './stylesheets/style.css';
+import App from './App';
 
-ReactDOM.render(
-<Bio name="Leandro Vicente" tagline="Software Developer and Creator" />
-, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,6 +1,6 @@
 import React from 'react';
-import SocialMediaList from './socialMediaList';
-import { SOCIAL_ICONS_AND_LINKS } from './constants';
+import SocialMediaList from '../socialMediaList';
+import { SOCIAL_ICONS_AND_LINKS } from '../../constants';
 
 export default function Bio(props) {
     return (

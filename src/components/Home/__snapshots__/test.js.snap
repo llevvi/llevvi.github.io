@@ -22,6 +22,11 @@ ShallowWrapper {
           name="Leandro Vicente"
           tagline="Software Developer and Content Creator"
         />,
+        <img
+          alt="Leandro profile picture"
+          className="avatar"
+          src="https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600"
+        />,
         <SocialMediaBox
           iconsAndLinks={
             Array [
@@ -63,6 +68,19 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Leandro profile picture",
+          "className": "avatar",
+          "src": "https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -118,6 +136,11 @@ ShallowWrapper {
             name="Leandro Vicente"
             tagline="Software Developer and Content Creator"
           />,
+          <img
+            alt="Leandro profile picture"
+            className="avatar"
+            src="https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600"
+          />,
           <SocialMediaBox
             iconsAndLinks={
               Array [
@@ -159,6 +182,19 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Leandro profile picture",
+            "className": "avatar",
+            "src": "https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,

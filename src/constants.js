@@ -19,5 +19,7 @@ const SOCIAL_ICONS_AND_LINKS = [
 ]
 
 const SUBSCRIBE_FORM_URL = 'https://goo.gl/forms/A3zRVgzeH3BMD2FJ3'
+
+const AVATAR_URL = 'https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600'
   
-export { SOCIAL_ICONS_AND_LINKS, SUBSCRIBE_FORM_URL }
+export { SOCIAL_ICONS_AND_LINKS, SUBSCRIBE_FORM_URL, AVATAR_URL }

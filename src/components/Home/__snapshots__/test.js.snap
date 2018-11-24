@@ -23,7 +23,7 @@ ShallowWrapper {
           tagline="Software Developer and Content Creator"
         />,
         <img
-          alt="Leandro profile picture"
+          alt="Leandro profile"
           className="avatar"
           src="https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600"
         />,
@@ -50,6 +50,7 @@ ShallowWrapper {
             ]
           }
         />,
+        <ContactBox />,
         <Footer
           address="Belo Horizonte - MG, Brazil"
         />,
@@ -74,7 +75,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "Leandro profile picture",
+          "alt": "Leandro profile",
           "className": "avatar",
           "src": "https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600",
         },
@@ -114,6 +115,15 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "function",
         "props": Object {
           "address": "Belo Horizonte - MG, Brazil",
@@ -137,7 +147,7 @@ ShallowWrapper {
             tagline="Software Developer and Content Creator"
           />,
           <img
-            alt="Leandro profile picture"
+            alt="Leandro profile"
             className="avatar"
             src="https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600"
           />,
@@ -164,6 +174,7 @@ ShallowWrapper {
               ]
             }
           />,
+          <ContactBox />,
           <Footer
             address="Belo Horizonte - MG, Brazil"
           />,
@@ -188,7 +199,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "Leandro profile picture",
+            "alt": "Leandro profile",
             "className": "avatar",
             "src": "https://www.gravatar.com/avatar/5a00d4ad57ed2f688007462c4736fa75?s=600",
           },
@@ -221,6 +232,15 @@ ShallowWrapper {
               },
             ],
           },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],

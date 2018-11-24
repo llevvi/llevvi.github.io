@@ -25,7 +25,7 @@ const SocialMediaBox = (props) => {
 }
 
 SocialMediaBox.propTypes = {
-  iconsAndLinks: PropTypes.string.isRequired
+  iconsAndLinks: PropTypes.array.isRequired
 }
 
 export default SocialMediaBox

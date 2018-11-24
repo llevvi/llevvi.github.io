@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 
 describe('Bio', () => {
   it('renders as expected', () => {
-    const bio = shallow(<Bio />)
+    const bio = shallow(<Bio name='Leandro' tagline='Test' />)
     expect(bio).toMatchSnapshot()
   })
 })

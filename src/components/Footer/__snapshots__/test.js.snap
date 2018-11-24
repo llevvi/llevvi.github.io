@@ -17,11 +17,16 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <address>
-        BH, Brasil
-      </address>,
+      "children": <footer>
+        <div
+          className="border"
+        />
+        <address>
+          BH, Brasil
+        </address>
+      </footer>,
     },
     "ref": null,
     "rendered": Object {
@@ -29,23 +34,58 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "BH, Brasil",
+        "children": Array [
+          <div
+            className="border"
+          />,
+          <address>
+            BH, Brasil
+          </address>,
+        ],
       },
       "ref": null,
-      "rendered": "BH, Brasil",
-      "type": "address",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "border",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "BH, Brasil",
+          },
+          "ref": null,
+          "rendered": "BH, Brasil",
+          "type": "address",
+        },
+      ],
+      "type": "footer",
     },
-    "type": "footer",
+    "type": Symbol(react.fragment),
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <address>
-          BH, Brasil
-        </address>,
+        "children": <footer>
+          <div
+            className="border"
+          />
+          <address>
+            BH, Brasil
+          </address>
+        </footer>,
       },
       "ref": null,
       "rendered": Object {
@@ -53,13 +93,43 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "BH, Brasil",
+          "children": Array [
+            <div
+              className="border"
+            />,
+            <address>
+              BH, Brasil
+            </address>,
+          ],
         },
         "ref": null,
-        "rendered": "BH, Brasil",
-        "type": "address",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "border",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "BH, Brasil",
+            },
+            "ref": null,
+            "rendered": "BH, Brasil",
+            "type": "address",
+          },
+        ],
+        "type": "footer",
       },
-      "type": "footer",
+      "type": Symbol(react.fragment),
     },
   ],
   Symbol(enzyme.__options__): Object {

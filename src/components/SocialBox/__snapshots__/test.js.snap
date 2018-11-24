@@ -3,7 +3,7 @@
 exports[`SocialBox renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SocialMediaList
+  Symbol(enzyme.__unrendered__): <SocialMediaBox
     iconsAndLinks={
       Array [
         Object {

@@ -3,7 +3,10 @@
 exports[`Bio renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Bio />,
+  Symbol(enzyme.__unrendered__): <Bio
+    name="Leandro"
+    tagline="Test"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,8 +21,12 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <h1 />,
-        <h2 />,
+        <h1>
+          Leandro
+        </h1>,
+        <h2>
+          Test
+        </h2>,
       ],
     },
     "ref": null,
@@ -29,10 +36,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "Leandro",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Leandro",
         "type": "h1",
       },
       Object {
@@ -40,10 +47,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "Test",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Test",
         "type": "h2",
       },
     ],
@@ -56,8 +63,12 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <h1 />,
-          <h2 />,
+          <h1>
+            Leandro
+          </h1>,
+          <h2>
+            Test
+          </h2>,
         ],
       },
       "ref": null,
@@ -67,10 +78,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Leandro",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Leandro",
           "type": "h1",
         },
         Object {
@@ -78,10 +89,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "Test",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "Test",
           "type": "h2",
         },
       ],

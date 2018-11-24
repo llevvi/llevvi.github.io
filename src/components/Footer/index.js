@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Footer = (props) => {
   const { address } = props
@@ -12,6 +13,10 @@ const Footer = (props) => {
       </footer>
     </React.Fragment>
   )
+}
+
+Footer.propTypes = {
+  address: PropTypes.string.isRequired
 }
 
 export default Footer

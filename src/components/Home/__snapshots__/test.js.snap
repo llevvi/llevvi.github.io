@@ -45,6 +45,9 @@ ShallowWrapper {
             ]
           }
         />,
+        <Footer
+          address="Belo Horizonte - MG, Brazil"
+        />,
       ],
     },
     "ref": null,
@@ -90,6 +93,17 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "address": "Belo Horizonte - MG, Brazil",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": Symbol(react.fragment),
   },
@@ -126,6 +140,9 @@ ShallowWrapper {
                 },
               ]
             }
+          />,
+          <Footer
+            address="Belo Horizonte - MG, Brazil"
           />,
         ],
       },
@@ -167,6 +184,17 @@ ShallowWrapper {
                 "url": "http://instagram.com/levvitalk",
               },
             ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "address": "Belo Horizonte - MG, Brazil",
           },
           "ref": null,
           "rendered": null,

@@ -1,32 +1,23 @@
 import React, { Component } from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-import { SUBSCRIBE_FORM_URL } from './constants'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Home from './components/Home'
-import Footer from './components/Footer'
+import YouTubeList from './components/YouTubeList'
 class App extends Component {
   constructor(props){
     super(props)
     library.add(fab)
   }
 
-  redirectToSubscribeForm = () => {
-    return (
-      window.location.replace(SUBSCRIBE_FORM_URL)
-    )
-  } 
-
   render() {
     return (
       <Router>
-        <React.Fragment>
-          <Route exect path='/' render={Home} />
-          <Route exact path='/lista' render={this.redirectToSubscribeForm} />
-          <Footer address='Belo Horizonte - MG, Brazil' />
-        </React.Fragment>
+        <Switch>
+          <Route exact path='/' render={Home} />
+          <Route path='/lista' render={YouTubeList} />
+        </Switch>
       </Router>
     )
   }

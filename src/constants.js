@@ -17,5 +17,7 @@ const SOCIAL_ICONS_AND_LINKS = [
     'name': 'instagram'
   }
 ]
+
+const SUBSCRIBE_FORM_URL = 'https://goo.gl/forms/A3zRVgzeH3BMD2FJ3'
   
-export { SOCIAL_ICONS_AND_LINKS }
+export { SOCIAL_ICONS_AND_LINKS, SUBSCRIBE_FORM_URL }

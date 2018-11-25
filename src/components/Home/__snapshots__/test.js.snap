@@ -50,7 +50,13 @@ ShallowWrapper {
             ]
           }
         />,
-        <ContactBox />,
+        <button
+          className="btn btn-sm"
+          id="contact-button"
+          onClick={[Function]}
+        >
+          Contact
+        </button>,
         <Footer
           address="Belo Horizonte - MG, Brazil"
         />,
@@ -115,11 +121,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": "Contact",
+          "className": "btn btn-sm",
+          "id": "contact-button",
+          "onClick": [Function],
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Contact",
+        "type": "button",
       },
       Object {
         "instance": null,
@@ -174,7 +185,13 @@ ShallowWrapper {
               ]
             }
           />,
-          <ContactBox />,
+          <button
+            className="btn btn-sm"
+            id="contact-button"
+            onClick={[Function]}
+          >
+            Contact
+          </button>,
           <Footer
             address="Belo Horizonte - MG, Brazil"
           />,
@@ -239,11 +256,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": "Contact",
+            "className": "btn btn-sm",
+            "id": "contact-button",
+            "onClick": [Function],
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Contact",
+          "type": "button",
         },
         Object {
           "instance": null,

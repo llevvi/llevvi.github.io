@@ -16,7 +16,7 @@ class App extends Component {
       <div id='content-wrap'>
         <Router>
           <Switch>
-            <Route exact path='/' render={Home} />
+            <Route exact path='/' component={Home} />
             <Route path='/lista' render={YouTubeList} />
           </Switch>
         </Router>

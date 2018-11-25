@@ -13,12 +13,14 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route exact path='/' render={Home} />
-          <Route path='/lista' render={YouTubeList} />
-        </Switch>
-      </Router>
+      <div id='content-wrap'>
+        <Router>
+          <Switch>
+            <Route exact path='/' render={Home} />
+            <Route path='/lista' render={YouTubeList} />
+          </Switch>
+        </Router>
+      </div>
     )
   }
 }

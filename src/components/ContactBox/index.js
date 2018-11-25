@@ -39,41 +39,42 @@ class ContactBox extends Component {
   render() {
     return(
       <React.Fragment>
-        <div>Say hi!</div>
-        <form onSubmit={this.handleSubmit}>
-          <div className='form-control'>
-            <label htmlFor='email'>
-              Email:
-            </label>
-          </div>
-          <div className='form-control'>
-            <input 
-              type='email' 
-              name='email'
-              id='email'
-              className='form-field'
-              value={this.state.email} 
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className='form-control'>
-            <label htmlFor='message'>
-              Message:
-            </label>
-          </div>
-          <div className='form-control'>
-            <textarea 
-              id='message'
-              className='form-field'
-              name='message'
-              value={this.state.message} 
-              onChange={this.handleChange} 
-            />
-          </div>
-          <div className='form-control'>
-            <input type='submit' id='submit' className='form-field' value='Submit' />
-          </div>
-        </form>
+        <div className='form-container'>
+          <form onSubmit={this.handleSubmit}>
+            <div className='form-group row'>
+              <label htmlFor='email' className='col-sm-4 col-form-label'>
+                Email:
+              </label>
+              <div className='col-sm-8'>
+                <input 
+                  type='email' 
+                  name='email'
+                  id='email'
+                  className='form-control'
+                  value={this.state.email} 
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className='form-group row'>
+              <label htmlFor='message' className='col-sm-4 col-form-label'>
+                Message:
+              </label>
+              <div className='col-sm-8'>
+                <textarea 
+                  id='message'
+                  name='message'
+                  className='form-control'
+                  required
+                  value={this.state.message} 
+                  onChange={this.handleChange} 
+                />
+              </div>
+            </div>
+            <button type='submit' id='submit' className='btn btn-default'>Submit</button>
+          </form>
+        </div>
       </React.Fragment>
     )
   }

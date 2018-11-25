@@ -2,34 +2,12 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
-.form-control {
+.form-container {
   width: 100%;
 }
 
-.form-field {
-  width: 50%;
-}
-
-#submit {
-  width: 100px;
-  height: 40px;
-}
-
-#email {
-  height: 20px;
-  text-align: center;
-  font-size: 14px;
-}
-
-#message {
-  height: 60px;
-  font-size: 14px;
-}
-
-@media only screen and (max-width: 470px) {
-  .form-field {
-    width: 80%;
-  }
-}

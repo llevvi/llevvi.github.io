@@ -69,4 +69,11 @@ describe('Contact Box', () => {
 
     expect(contactBox.find('#contact-button').length).toBe(1)
   })
+
+  it('displays error message and return button when message is not sent', () => {
+    contactBox.setState({messageError: true})
+
+    expect(contactBox.find('.error-message').length).toBe(1)
+    expect(contactBox.find('#return-button').length).toBe(1)
+  })
 })

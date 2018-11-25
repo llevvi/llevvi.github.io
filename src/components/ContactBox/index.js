@@ -14,7 +14,8 @@ class ContactBox extends Component {
       email: '', 
       showForm: false,
       sendingMessage: false,
-      messageSent: false
+      messageSent: false,
+      messageError: false
     }
   }
 
@@ -45,7 +46,8 @@ class ContactBox extends Component {
     this.setState(
       {
         showForm: false,
-        messageSent: false
+        messageSent: false,
+        messageError: false
       }
     )
   }
@@ -64,10 +66,14 @@ class ContactBox extends Component {
           email: ''
         })
       }).catch(() => {
-        // eslint-disable-next-line no-console
-        console.log('erro')
+        this.setState({ 
+          messageError: true,
+          sendingMessage: false
+        })
       })
   }
+
+  returnButton = () => <button id='return-button' className='btn btn-xs' onClick={this.handleReturnButton}>Return</button>
 
   render() {
     if(this.state.sendingMessage){
@@ -80,7 +86,16 @@ class ContactBox extends Component {
       return(
         <React.Fragment>
           <div className='success-message'>Sent! I will respond asap</div>
-          <button id='return-button' className='btn btn-xs' onClick={this.handleReturnButton}>Return</button>
+          {this.returnButton()}
+        </React.Fragment>
+      )
+    }
+
+    if(this.state.messageError){
+      return(
+        <React.Fragment>
+          <div className='error-message'>Sorry, your message was not sent. Contact me at: leandrovicente.info@gmail.com</div>
+          {this.returnButton()}
         </React.Fragment>
       )
     }

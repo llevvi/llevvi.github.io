@@ -9,7 +9,7 @@ const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScJX66KS2GU
 class ContactBox extends Component {
   constructor(props){
     super(props)
-    this.state = { message: '', email: '' }
+    this.state = { message: '', email: '', showForm: false }
   }
 
   handleChange = (event) => {
@@ -19,6 +19,17 @@ class ContactBox extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.sendMessage()
+  }
+
+  handleFormToggle = () => {
+    this.setState( 
+      (prevState) => {
+        const { showForm } = prevState
+        return {
+          showForm: !showForm
+        } 
+      }
+    )
   }
 
   sendMessage = () => {
@@ -37,6 +48,12 @@ class ContactBox extends Component {
   }
 
   render() {
+    if(this.state.showForm == false){
+      return(
+        <button id='contact-button' className='btn btn-sm' onClick={this.handleFormToggle}>Contact</button>
+      )
+    }
+
     return(
       <React.Fragment>
         <div className='form-container'>
@@ -72,7 +89,10 @@ class ContactBox extends Component {
                 />
               </div>
             </div>
-            <button type='submit' id='submit' className='btn btn-default'>Submit</button>
+            <div>
+              <button type='button' id='cancel-button' className='btn btn-default btn-sm btn-action' onClick={this.handleFormToggle}>Cancel</button>
+              <button type='submit' className='btn btn-sm btn-default btn-action'>Submit</button>
+            </div>
           </form>
         </div>
       </React.Fragment>

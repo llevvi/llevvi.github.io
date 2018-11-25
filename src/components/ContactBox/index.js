@@ -4,6 +4,7 @@ import './index.css'
 
 const GOOGLE_FORM_MESSAGE_ID = 'entry.1249636003'
 const GOOGLE_FORM_EMAIL_ID = 'entry.1157005188'
+const CORS_PROXY = 'https://cors-escape.herokuapp.com/'
 const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScJX66KS2GUD1Ci-piKoPbsracqXFjJr7kSWd3yAin_vgk7OQ/formResponse'
 
 class ContactBox extends Component {
@@ -57,7 +58,7 @@ class ContactBox extends Component {
     formData.append(GOOGLE_FORM_MESSAGE_ID, this.state.message)
     formData.append(GOOGLE_FORM_EMAIL_ID, this.state.email)
 
-    axios.post(GOOGLE_FORM_ACTION,formData)
+    axios.post(CORS_PROXY + GOOGLE_FORM_ACTION,formData)
       .then(() => {
         this.setState({ 
           messageSent: true,

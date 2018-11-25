@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import moxios from 'moxios'
 import ContactBox from '.'
 
 describe('Contact Box', () => {
@@ -7,6 +8,11 @@ describe('Contact Box', () => {
 
   beforeEach(() => {
     contactBox = shallow(<ContactBox />)
+    moxios.install()
+  })
+
+  afterEach(() => {
+    moxios.uninstall()
   })
 
   it('Renders correctly', () => {
@@ -48,5 +54,19 @@ describe('Contact Box', () => {
     })
 
     expect(contactBox.text()).toBe('Sending...')
+  })
+
+  it('shows success message and contact button if the message is sent successfully', () => {
+    contactBox.setState({messageSent: true})
+
+    expect(contactBox.find('.success-message').length).toBe(1)
+    expect(contactBox.find('#return-button').length).toBe(1)
+  })
+
+  it('displays contact button when the return button is clicked', () => {
+    contactBox.setState({messageSent: true})
+    contactBox.find('#return-button').simulate('click')
+
+    expect(contactBox.find('#contact-button').length).toBe(1)
   })
 })

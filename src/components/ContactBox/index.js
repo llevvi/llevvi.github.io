@@ -13,7 +13,8 @@ class ContactBox extends Component {
       message: '', 
       email: '', 
       showForm: false,
-      sendingMessage: false
+      sendingMessage: false,
+      messageSent: false
     }
   }
 
@@ -24,8 +25,7 @@ class ContactBox extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.setState({
-      sendingMessage: true,
-      showForm: false
+      sendingMessage: true
     })
     this.sendMessage()
   }
@@ -41,6 +41,15 @@ class ContactBox extends Component {
     )
   }
 
+  handleReturnButton = () => {
+    this.setState(
+      {
+        showForm: false,
+        messageSent: false
+      }
+    )
+  }
+
   sendMessage = () => {
     const formData = new FormData()
     formData.append(GOOGLE_FORM_MESSAGE_ID, this.state.message)
@@ -48,8 +57,12 @@ class ContactBox extends Component {
 
     axios.post(GOOGLE_FORM_ACTION,formData)
       .then(() => {
-        // eslint-disable-next-line no-console
-        console.log('sucesso')
+        this.setState({ 
+          messageSent: true,
+          sendingMessage: false,
+          message: '',
+          email: ''
+        })
       }).catch(() => {
         // eslint-disable-next-line no-console
         console.log('erro')
@@ -63,7 +76,16 @@ class ContactBox extends Component {
       )
     }
 
-    if(this.state.showForm == false){
+    if(this.state.messageSent){
+      return(
+        <React.Fragment>
+          <div className='success-message'>Sent! I will respond asap</div>
+          <button id='return-button' className='btn btn-xs' onClick={this.handleReturnButton}>Return</button>
+        </React.Fragment>
+      )
+    }
+
+    if(this.state.showForm === false){
       return(
         <button id='contact-button' className='btn btn-sm' onClick={this.handleFormToggle}>Contact</button>
       )

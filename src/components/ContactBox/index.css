@@ -16,3 +16,17 @@ form {
   margin-right: 20px;
 }
 
+.form-group{
+  width: 60%;
+}
+
+#contact-button{
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .form-group{
+    width: 90%;
+  }
+}
+

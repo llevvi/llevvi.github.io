@@ -73,7 +73,7 @@ class ContactBox extends Component {
       })
   }
 
-  returnButton = () => <button id='return-button' className='btn btn-xs' onClick={this.handleReturnButton}>Return</button>
+  returnButton = () => <button id='return-button' className='btn btn-default btn-xs' onClick={this.handleReturnButton}>Return</button>
 
   render() {
     if(this.state.sendingMessage){
@@ -111,7 +111,7 @@ class ContactBox extends Component {
         <div className='form-container'>
           <form onSubmit={this.handleSubmit}>
             <div className='form-group row'>
-              <label htmlFor='email' className='col-sm-4 col-form-label'>
+              <label htmlFor='email' className='col-sm-2 col-form-label'>
                 Email:
               </label>
               <div className='col-sm-8'>
@@ -127,7 +127,7 @@ class ContactBox extends Component {
               </div>
             </div>
             <div className='form-group row'>
-              <label htmlFor='message' className='col-sm-4 col-form-label'>
+              <label htmlFor='message' className='col-sm-2 col-form-label'>
                 Message:
               </label>
               <div className='col-sm-8'>
@@ -138,6 +138,7 @@ class ContactBox extends Component {
                   required
                   value={this.state.message} 
                   onChange={this.handleChange} 
+                  rows='6'
                 />
               </div>
             </div>

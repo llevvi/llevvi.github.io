@@ -40,4 +40,13 @@ describe('Contact Box', () => {
 
     expect(contactBox.find('#contact-button').length).toBe(1)
   })
+
+  it('shows loading message after submitting form', () => {
+    contactBox.setState({showForm: true})
+    contactBox.find('form').simulate('submit', {
+      preventDefault: jest.fn()
+    })
+
+    expect(contactBox.text()).toBe('Sending...')
+  })
 })

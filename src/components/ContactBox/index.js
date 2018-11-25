@@ -9,7 +9,12 @@ const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScJX66KS2GU
 class ContactBox extends Component {
   constructor(props){
     super(props)
-    this.state = { message: '', email: '', showForm: false }
+    this.state = { 
+      message: '', 
+      email: '', 
+      showForm: false,
+      sendingMessage: false
+    }
   }
 
   handleChange = (event) => {
@@ -18,6 +23,10 @@ class ContactBox extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    this.setState({
+      sendingMessage: true,
+      showForm: false
+    })
     this.sendMessage()
   }
 
@@ -48,6 +57,12 @@ class ContactBox extends Component {
   }
 
   render() {
+    if(this.state.sendingMessage){
+      return(
+        <div>Sending...</div>
+      )
+    }
+
     if(this.state.showForm == false){
       return(
         <button id='contact-button' className='btn btn-sm' onClick={this.handleFormToggle}>Contact</button>
